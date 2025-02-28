@@ -118,7 +118,7 @@
     color: #F0E6D9;
     text-overflow: ellipsis;
     background: rgba(31, 26, 23, 0.95);
-    padding-right: 55px;
+    padding-right: 70px;
     padding-left: 55px;
     font-size: 16px;
     flex: 1;
@@ -185,11 +185,19 @@
 .custom .options li .text {
     line-height: 1.4;
     letter-spacing: 0.5px;
+    padding-right: 10px;
+    display: block;
 }
 
 .custom .options li .procent {
     color: #B8860B;
     font-style: italic;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 50px;
+    text-align: right;
 }
 
 /*
