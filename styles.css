@@ -214,8 +214,8 @@
     height: 25px;
     clear: both;
     overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: -15px;
+    margin-top: 10px;
+    margin-bottom: -25px;
 }
 
 .custom.active .credits,
