@@ -1,50 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Abel);
 
 .custom {
-    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0) 100%);
-    width: 600px;
-    transition: all 0.5s ease;
-    padding: 15px 30px;
-    font-family: Abel, sans-serif;
-    opacity: 0;
+    background: #000;
+    width: 100%;
+    transition: opacity 1s;
+    padding: 10px;
+    font-family: Abel;
     position: fixed;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
-    transform: translateX(-20px);
+    opacity: 0;
 }
 
 .custom.finished,
 .custom.active {
     opacity: 1;
-    transform: translateX(0);
 }
 
 .custom .metaInfo {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     background: transparent;
-    overflow: hidden;
-    padding: 10px 0 0 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    margin-top: 10px;
+    width: auto;
 }
 
 .custom .total,
 .custom .duration {
-    background: transparent;
+    background: #444;
     float: left;
-    width: auto;
-    text-align: left;
-    padding: 0;
-    margin: 0 20px 0 0;
+    width: 49%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
     line-height: 1.3;
-    color: rgba(255,255,255,0.6);
 }
 
 .custom .total strong,
 .custom .duration strong {
-    color: #fff;
-    font-size: 14px;
-    display: inline;
-    margin-left: 5px;
+    color: #ffa;
+    font-size: 20px;
+    display: block;
+}
+
+.custom .total {
+    margin-right: 2%;
 }
 
 .custom.finished .options li,
@@ -73,47 +74,63 @@
     height: 35px;
 }
 
+.custom .options {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 10px;
+}
+
 .custom .options li {
     position: relative;
-    padding: 5px 55px 5px 55px;
+    border: 1px;
+    padding: 10px;
     color: #fff;
     text-overflow: ellipsis;
-    background: transparent;
+    background: #888;
+    padding-right: 55px;
+    padding-left: 55px;
     font-size: 15px;
-    border: none;
-    margin-bottom: 5px;
+    flex: 1;
+    min-width: 0;
 }
 
 .custom .options li.question {
-    padding: 0 0 5px 0;
+    padding: 10px 20px;
     white-space: normal;
-    background: transparent;
-    clear: both;
+    background: blue;
     line-height: 1.3;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    border-bottom: 2px solid rgba(255,255,255,0.2);
-    margin-bottom: 10px;
+    font-size: 20px;
+    position: relative;
+    flex: 0 0 25%;
 }
 
 .custom .options li.help {
-    background: transparent;
-    text-align: left;
-    overflow: hidden;
-    height: 0;
-    font-size: 12px;
-    color: rgba(255,255,255,0.6);
+    display: none;
+}
+
+.custom .options li .procent {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.custom .options li .number {
+    padding: 5px 10px;
+    background: #333;
+    position: absolute;
+    top: 5px;
+    left: 10px;
 }
 
 .custom .options li .bar {
-    background: rgba(255,255,255,0.1);
-    height: 3px;
+    background: #444;
+    height: 5px;
     margin-top: 5px;
 }
 
 .custom .options li .bar .bar-inner {
-    background: #4CAF50;
+    background: #fff;
     height: 100%;
     width: 0;
     transition: width 1s;
@@ -152,56 +169,20 @@
     opacity: 0;
 }
 
-
-/*
-* Positioning
-*/
-.custom.topLeft {
-    top: 20px;
-    left: 20px;
-}
-
-.custom.topCenter {
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.custom.topRight {
-    top: 20px;
-    right: 20px;
-}
-
-.custom.middleLeft {
-    top: 50%;
-    transform: translate(0, -50%);
-    left: 20px;
-}
-
-.custom.middleCenter {
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-}
-
-.custom.middleRight {
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 20px;
-}
-
-.custom.bottomLeft {
-    bottom: 20px;
-    left: 20px;
-}
-
-.custom.bottomCenter {
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
+/* Remove positioning classes as we're fixing to bottom */
+.custom.topLeft,
+.custom.topCenter,
+.custom.topRight,
+.custom.middleLeft,
+.custom.middleCenter,
+.custom.middleRight,
+.custom.bottomLeft,
+.custom.bottomCenter,
 .custom.bottomRight {
-    bottom: 20px;
-    right: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    transform: none;
 }
