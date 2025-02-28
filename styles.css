@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap');
 
 .custom {
@@ -43,7 +43,7 @@
     transform: translateY(-50%);
     background: transparent;
     width: auto;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .custom .total,
@@ -126,9 +126,10 @@
     background: #1C1917;
     color: #E8E3D9;
     line-height: 1.4;
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: normal;
     position: relative;
     flex: 0 0 30%;
     border: 1px solid #8B7355;
