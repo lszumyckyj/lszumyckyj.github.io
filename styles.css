@@ -148,6 +148,18 @@
     display: none;
 }
 
+.custom .options li .text {
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    padding-left: 55px;
+    padding-right: 10px;
+    display: block;
+    flex-grow: 0;
+    align-self: flex-start;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
 .custom .options li .number {
     padding: 5px 12px;
     background: #2C1518;
@@ -162,16 +174,7 @@
     border: 1px solid #B8860B;
     width: 45px;
     text-align: center;
-}
-
-.custom .options li .text {
-    line-height: 1.4;
-    letter-spacing: 0.5px;
-    padding-left: 55px;
-    padding-right: 10px;
-    display: block;
-    flex-grow: 0;
-    align-self: center;
+    z-index: 1;
 }
 
 .custom .options li .bar {
