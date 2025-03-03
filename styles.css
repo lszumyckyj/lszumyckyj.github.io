@@ -110,18 +110,18 @@
 .custom .options li {
     position: relative;
     border: 1px solid #B8860B;
-    padding: 15px;
+    padding: 20px 20px 45px 20px;
     color: #F0E6D9;
     text-overflow: ellipsis;
     background: rgba(31, 26, 23, 0.95);
-    padding-right: 70px;
-    padding-left: 55px;
     font-size: 26px;
     flex: 1;
     min-width: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3),
                 inset 0 0 30px rgba(120, 20, 30, 0.1);
     letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .custom .options li.question {
@@ -157,14 +157,29 @@
     left: 10px;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     border: 1px solid #B8860B;
+    width: 45px;
+    text-align: center;
+}
+
+.custom .options li .text {
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    padding-left: 55px;
+    padding-right: 10px;
+    display: block;
+    flex-grow: 1;
 }
 
 .custom .options li .bar {
     background: rgba(184, 134, 11, 0.2);
-    height: 3px;
-    margin-top: 8px;
+    height: 4px;
+    margin: 0;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
 }
 
 .custom .options li .bar .bar-inner {
@@ -176,22 +191,15 @@
     box-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
 }
 
-.custom .options li .text {
-    line-height: 1.4;
-    letter-spacing: 0.5px;
-    padding-right: 10px;
-    display: block;
-}
-
 .custom .options li .procent {
     color: #B8860B;
     font-style: italic;
     position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 20px;
+    bottom: 5px;
     min-width: 50px;
     text-align: right;
+    font-size: 20px;
 }
 
 /*
