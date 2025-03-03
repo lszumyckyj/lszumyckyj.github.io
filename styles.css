@@ -203,25 +203,17 @@
 
 
 .custom .credits {
-    opacity: 0;
-    height: 0;
-}
-
-.custom .credits {
-    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: rgba(184, 134, 11, 0.7); /* Subtle gold color */
+    font-style: italic;
+    letter-spacing: 0.5px;
+    height: auto;
     opacity: 1;
-    transition: all 1s;
-    height: 25px;
-    clear: both;
-    overflow: hidden;
-    margin-top: 15px;
-    margin-bottom: -20px;
-}
-
-.custom.active .credits,
-.custom.removing .credits {
-    height: 0;
-    opacity: 0;
+    transition: none;
+    margin: 0;
 }
 
 /* Remove positioning classes as we're fixing to bottom */
@@ -240,4 +232,13 @@
     right: 0;
     top: auto;
     transform: none;
+}
+
+/* Remove the duplicate .custom .credits rule */
+
+/* Remove or override the animation states */
+.custom.active .credits,
+.custom.removing .credits {
+    height: auto;
+    opacity: 1;
 }
