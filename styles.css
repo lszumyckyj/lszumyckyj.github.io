@@ -204,9 +204,9 @@
 
 .custom .credits {
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     right: 10px;
-    font-size: 12px;
+    font-size: 16px;
     color: rgba(184, 134, 11, 0.7); /* Subtle gold color */
     font-style: italic;
     letter-spacing: 0.5px;
